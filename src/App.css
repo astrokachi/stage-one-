@@ -1,0 +1,96 @@
+.app{
+    margin: 0 6.72rem;
+    position: relative;
+}
+
+.container{
+    display: grid;
+    padding-top: 3.84rem;
+}
+
+.img__con{
+    margin: 0 auto;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shareImg__con{
+    position: absolute;
+    top: 44px;
+    right: 20%;
+    border-radius: 50%;
+}
+
+svg{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+circle {
+    fill: transparent;
+    stroke: var(--gray-300);
+    stroke-width: 3;
+    position: relative;
+  }
+
+  .dashed {
+    stroke-dasharray: 8, 8.5;
+  }
+
+  .share__img{
+    height: 100%;
+    width: 100%;
+  }
+
+main{
+    margin-top: 3.36rem;
+    display: grid;
+    row-gap: 1.44rem;
+}
+
+#slack {
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    transition: all ease-out 200ms;
+}
+
+a:hover{
+    transform: scale(1.01);
+}
+
+.link__con{
+    width: 100%;
+    padding: 24px 0;
+    border-radius: 8px;
+    background-color: var(--gray-200);
+}
+
+.name__text{
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+ 
+}
+
+.twitter{
+    font-size: 48px / 3rem ;
+    line-height: 60px / 3.75rem ;
+    align-tracks:  -2%;
+    font-weight: 800;
+}
+
+.icons{
+    display: flex;
+    width: 100%;
+    padding: 24px;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 64px;
+}
