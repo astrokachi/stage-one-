@@ -10,11 +10,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   color: var(--gray-900);
+  transition: all ease 200ms;
 }
 
 
 :root{
   --gray-300: #D0D5DD;
   --gray-200: #EAECF0;
+  --gray-900: #101828;
+  --gray-500: #667085;
+  --gray-50: #F9FAFB;
   --gray-900: #101828;
 }
