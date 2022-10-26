@@ -6,6 +6,7 @@
 .container{
     display: grid;
     padding-top: 3.84rem;
+    background-color: white;
 }
 
 .img__con{
@@ -19,8 +20,10 @@
 .shareImg__con{
     position: absolute;
     top: 44px;
-    right: 20%;
+    right: 190px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
 }
 
 svg{
@@ -34,10 +37,16 @@ circle {
     stroke: var(--gray-300);
     stroke-width: 3;
     position: relative;
+    transition: all ease 200ms;
+  }
+
+
+.fill {
+    fill: var(--gray-50)
   }
 
   .dashed {
-    stroke-dasharray: 8, 8.5;
+    stroke-dasharray: 6, 7.5;
   }
 
   .share__img{
@@ -46,7 +55,7 @@ circle {
   }
 
 main{
-    margin-top: 3.36rem;
+    margin-top: 56px;
     display: grid;
     row-gap: 1.44rem;
 }
@@ -58,11 +67,11 @@ main{
 a{
     text-decoration: none;
     color: black;
-    transition: all ease-out 200ms;
+    transition: all ease-out 300ms;
 }
 
 a:hover{
-    transform: scale(1.01);
+    background-color: var(--gray-300);
 }
 
 .link__con{
@@ -71,6 +80,7 @@ a:hover{
     border-radius: 8px;
     background-color: var(--gray-200);
 }
+
 
 .name__text{
     text-align: center;
@@ -93,4 +103,113 @@ a:hover{
     justify-content: center;
     gap: 24px;
     margin-bottom: 64px;
+}
+
+footer{
+    margin: 48px 80px;
+}
+
+.footer__con {
+    border-top: 1px solid var(--gray-200);
+    height: 64px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.footer__text {
+    font-weight: normal;
+    font-size: medium;
+    color: var(--gray-500)
+}
+
+
+.tooltip {
+    position: absolute;
+    transition: all ease-in 200ms;
+    left: -120px;
+    box-shadow: 0px 0px 21px -3px rgba(0,0,0,0.1);
+    background-color: transparent;
+}
+
+.tooltip__text {
+    background-color: var(--gray-900);
+    color:#ffffff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 20px/1.25rem;
+    line-height: 30px/1.875rem;
+    width: max-content;
+}
+
+
+.angle {
+    transform: rotate(45deg);
+    background-color: var(--gray-900);
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    z-index: -1;
+    
+}
+
+.show {
+    /* display: unset; */
+    z-index: 1;
+    transition: all ease-in 200ms;
+}
+
+.hide { 
+    /* display: none; */
+    z-index: -1;
+    transition: all ease-in 200ms;
+}
+
+#profile__img{
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+
+#twitter {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.slack{
+    height: max-content;
+    width: max-content;
+}
+
+
+@media screen and (max-width: 985px) {
+    footer{
+        display: none;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    main {
+        margin-bottom: 48px;
+    }
+
+    #twitter {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .app{
+        margin: 0 16px;
+    }
+
+    .shareImg__con{ 
+        right: 0;
+    }
 }
