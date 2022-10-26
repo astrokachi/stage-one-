@@ -10,6 +10,7 @@
 }
 
 .img__con{
+    position: relative;
     margin: 0 auto;
     width: max-content;
     display: flex;
@@ -144,6 +145,7 @@ footer{
 }
 
 
+
 .angle {
     transform: rotate(45deg);
     background-color: var(--gray-900);
@@ -188,6 +190,21 @@ footer{
 
 .github:hover {
     background: none;
+}
+
+.camera__con {
+   position: absolute;
+   border-radius: 50%;
+   height: 88px;
+   width: 88px;
+   background-color: #344054BF;
+}
+
+.cam {
+    top: 58px; 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 @media screen and (max-width: 985px) {
