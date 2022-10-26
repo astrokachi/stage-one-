@@ -15,7 +15,7 @@ const links = [
   },
   {
     name: 'Python Books',
-    link: 'https://books.zuri.team/python-for-beginners?ref_id=Ozoemena%Kachi',
+    link: 'https://books.zuri.team/python-for-beginners?ref_id=astro',
     id: 'book__python',
   },
   {
