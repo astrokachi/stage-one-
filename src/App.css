@@ -186,6 +186,9 @@ footer{
     width: max-content;
 }
 
+.github:hover {
+    background: none;
+}
 
 @media screen and (max-width: 985px) {
     footer{

@@ -61,7 +61,7 @@ function App() {
 
         <div className="icons">
           <img src={slack} alt="slack" className="slack" />
-          <a href="https://github.com/astrokachi" target={'_blank'} rel="noreferrer">
+          <a href="https://github.com/astrokachi" className='github' target={'_blank'} rel="noreferrer">
             <img src={github} alt="github" />
           </a>
         </div>
