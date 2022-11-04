@@ -209,7 +209,16 @@ footer{
 
 @media screen and (max-width: 985px) {
     footer{
-        display: none;
+        margin: 48px 16px;
+
+    }
+
+    .footer__con{
+        flex-direction: column;
+        padding: 38px 0;
+        gap: 16.21px;
+        /* justify-content: flex-start; */
+        align-items: flex-start;
     }
 
     .icons {
