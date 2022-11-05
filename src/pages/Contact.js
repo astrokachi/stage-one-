@@ -1,8 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Footer from '../components/Footer';
 
 const Contact = () => {
   const [isAgreed, setIsAgreed] = useState(false);
+  const [isError, setIsError] = useState(false);
+
+  const messageRef = useRef('');
+
+  const checkError = () => {
+    if (messageRef.current.value !== '') {
+      setIsError(false);
+    } 
+    else {
+      setIsError(true);
+    }
+  };
+
+  useEffect(() => {
+    checkError();
+  });
+
+  console.log(messageRef.current.value);
+  console.log(isError);
 
   return (
     <>
@@ -58,8 +77,11 @@ const Contact = () => {
                 type={'text'}
                 name="message"
                 id="message"
+                className={`${isError && 'error'}`}
+                ref={messageRef}
                 placeholder="Send a message and I'll reply you as soon as possible..."
               />
+              {isError && <p className='contact_msg'>Please enter a message</p>}
             </div>
 
             <div className="">
@@ -73,7 +95,7 @@ const Contact = () => {
                 You agree to providing your data to astro who may contact you.
               </label> */}
               <input
-                onClick={() => setIsAgreed(!isAgreed)}
+                onChange={() => setIsAgreed(!isAgreed)}
                 type={'checkbox'}
                 name="check"
                 id="check"
