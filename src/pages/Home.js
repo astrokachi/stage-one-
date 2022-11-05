@@ -31,7 +31,7 @@ const Home = () => {
     };
   }, []);
   return (
-    <div>
+    <div className="home">
       <div
         className="shareImg__con"
         onMouseEnter={() => setIsHover(true)}
