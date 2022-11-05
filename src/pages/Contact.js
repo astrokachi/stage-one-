@@ -10,18 +10,10 @@ const Contact = () => {
   const checkError = () => {
     if (messageRef.current.value !== '') {
       setIsError(false);
-    } 
-    else {
+    } else {
       setIsError(true);
     }
   };
-
-  useEffect(() => {
-    checkError();
-  });
-
-  console.log(messageRef.current.value);
-  console.log(isError);
 
   return (
     <>
@@ -81,30 +73,24 @@ const Contact = () => {
                 ref={messageRef}
                 placeholder="Send a message and I'll reply you as soon as possible..."
               />
-              {isError && <p className='contact_msg'>Please enter a message</p>}
+              {isError && <p className="contact_msg">Please enter a message</p>}
             </div>
 
             <div className="">
-              {/* <input
-                name="cssCheckbox"
-                id="demo_opt_1"
-                type="checkbox"
-                class="css-checkbox"
-              />
-              <label for="demo_opt_1">
-                You agree to providing your data to astro who may contact you.
-              </label> */}
-              <input
-                onChange={() => setIsAgreed(!isAgreed)}
-                type={'checkbox'}
-                name="check"
-                id="check"
-                checked={isAgreed ? true : false}
-                placeholder="Send a message and I'll reply you as soon as possible..."
-              />
-              <label htmlFor="check" className="small_input check">
-                You agree to providing your data to astro who may contact you.
-              </label>
+              <div id="inputPreview">
+                <input
+                  onClick={checkError}
+                  onChange={() => !isError && setIsAgreed(!isAgreed)}
+                  name="cssCheckbox"
+                  id="demo_opt_1"
+                  type="checkbox"
+                  class="css-checkbox"
+                  checked={!isError && isAgreed ? true : false}
+                />
+                <label for="demo_opt_1" className="small_input check">
+                  You agree to providing your data to astro who may contact you.
+                </label>
+              </div>
             </div>
 
             <button
